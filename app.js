@@ -535,4 +535,36 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initHeroSlideshow();
   loadExercise();
+  initFigurasVideo();
 });
+
+// ─── Video Figuras 3D ─────────────────────────────────────
+function initFigurasVideo() {
+  const video   = document.getElementById('figuras-video');
+  const playBtn = document.getElementById('video-play-btn');
+  if (!video || !playBtn) return;
+
+  playBtn.addEventListener('click', () => {
+    video.play();
+    playBtn.classList.add('hidden');
+  });
+
+  video.addEventListener('pause', () => {
+    playBtn.classList.remove('hidden');
+  });
+
+  video.addEventListener('ended', () => {
+    playBtn.classList.remove('hidden');
+  });
+
+  // Pausar si la sección no es visible (IntersectionObserver)
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(video);
+}
