@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aritmetica Digital C1 — Software Educativo Inclusivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a class="logo" href="#">
+      <svg class="logo-star" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="20,2 24,14 38,14 27,22 31,34 20,26 9,34 13,22 2,14 16,14" fill="#d4a017"/>
+      </svg>
+      Aritmetica Digital <span class="logo-tag">C1</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#caracteristicas">Características</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#figuras">Figuras 3D</a></li>
+      <li><a href="#modulos">Módulos</a></li>
+      <li><a href="#docente">Docente</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<div class="hero-outer" id="inicio">
+
+  <!-- Slideshow de fondo -->
+  <div class="hero-slideshow" id="hero-slideshow">
+    <div class="slide active" style="background-image:url('imagenes/7f99ede1-6aa7-439b-b972-62970fa48e0d.jpg')"></div>
+    <div class="slide" style="background-image:url('imagenes/Gemini_Generated_Image_4cbos44cbos44cbo.png')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✦ Software Educativo Inclusivo</div>
+      <h1>
+        Aprende <span class="text-lime">Aritmética</span><br />
+        con <span class="text-gold">Figuras 3D</span>
+      </h1>
+      <p class="hero-desc">
+        Una herramienta visual e interactiva diseñada para niños con necesidades
+        educativas especiales. Suma, resta, multiplica y divide aprendiendo
+        paso a paso con explicaciones claras y figuras tridimensionales.
+      </p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="scrollToSection('demo')">Ver Demo Interactiva</button>
+        <button class="btn-outline" onclick="scrollToSection('caracteristicas')">Conocer el Proyecto</button>
+      </div>
+    </div>
+
+    <div class="hero-shapes">
+      <!-- Esfera Verde -->
+      <div class="shape-float float-1">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="54" r="42" fill="#a8d400"/>
+          <circle cx="36" cy="38" r="13" fill="#c5f000" opacity="0.65"/>
+          <circle cx="60" cy="66" r="8" fill="#7faf00" opacity="0.45"/>
+        </svg>
+        <div class="shape-tag">ESFERA</div>
+      </div>
+      <!-- Cubo Amarillo -->
+      <div class="shape-float float-2">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="25,45 75,45 75,90 25,90" fill="#f5c518"/>
+          <polygon points="5,25 55,25 75,45 25,45" fill="#ffe066"/>
+          <polygon points="75,45 95,25 95,70 75,90" fill="#c9a000"/>
+        </svg>
+        <div class="shape-tag">CUBO</div>
+      </div>
+      <!-- Triángulo Rojo -->
+      <div class="shape-float float-3">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,6 4,94 96,94" fill="#e84545"/>
+          <polygon points="50,6 96,94 73,94" fill="#c02020"/>
+          <line x1="4" y1="94" x2="96" y2="94" stroke="#ff7070" stroke-width="3"/>
+        </svg>
+        <div class="shape-tag">TRIÁNGULO</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════ STATS ═══════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num">4</span>
+    <span class="stat-desc">Operaciones<br>Matemáticas</span>
+  </div>
+  <div class="stat-div"></div>
+  <div class="stat-item">
+    <span class="stat-num">5</span>
+    <span class="stat-desc">Figuras<br>3D</span>
+  </div>
+  <div class="stat-div"></div>
+  <div class="stat-item">
+    <span class="stat-num">100%</span>
+    <span class="stat-desc">Diseño<br>Inclusivo</span>
+  </div>
+  <div class="stat-div"></div>
+  <div class="stat-item">
+    <span class="stat-num">∞</span>
+    <span class="stat-desc">Ejercicios<br>Adaptativos</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ CARACTERÍSTICAS ═══════════════════════ -->
+<section class="section-light" id="caracteristicas">
+  <div class="container">
+    <div class="section-header">
+      <h2>¿Qué hace <span class="text-navy">Aritmetica Digital C1</span> especial?</h2>
+      <p>Una plataforma pensada para cada niño, con herramientas que facilitan
+        la comprensión y el aprendizaje a su propio ritmo.</p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feat-icon feat-lime">
+          <i class="bi bi-lightbulb-fill"></i>
+        </div>
+        <h3>Explicaciones Paso a Paso</h3>
+        <p>Antes de cada ejercicio el sistema muestra una guía lógica y visual
+          para que el niño comprenda la operación antes de responder.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feat-icon feat-gold">
+          <i class="bi bi-stars"></i>
+        </div>
+        <h3>Ejercicios Asociativos 3D</h3>
+        <p>Tres figuras tridimensionales con valores asignados. El estudiante
+          selecciona la que representa el resultado correcto.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feat-icon feat-navy">
+          <i class="bi bi-box-fill"></i>
+        </div>
+        <h3>Piezas Físicas 3D</h3>
+        <p>Cubos, esferas, pirámides, cilindros y conos impresos en 3D refuerzan
+          la motricidad, la asociación visual y la comprensión sensorial.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feat-icon feat-lime">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <h3>Seguimiento Docente</h3>
+        <p>Reportes detallados del progreso de cada estudiante para facilitar
+          el seguimiento individualizado y la planificación de clases.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DEMO ═══════════════════════════════ -->
+<section class="section-dark" id="demo">
+  <div class="container">
+    <div class="section-header light">
+      <h2>Demo <span class="text-gold">Interactiva</span></h2>
+      <p>Experimenta cómo el sistema guía al estudiante con explicaciones
+        antes de resolver el ejercicio con figuras 3D.</p>
+    </div>
+
+    <div class="demo-layout">
+
+      <!-- Panel lateral de operaciones -->
+      <div class="op-panel">
+        <h4 class="op-panel-title">Selecciona la operación</h4>
+        <div class="op-btns">
+          <button class="op-btn active" id="op-suma" onclick="selectOp('suma',this)">
+            <span class="op-sym">+</span><span>Suma</span>
+          </button>
+          <button class="op-btn" id="op-resta" onclick="selectOp('resta',this)">
+            <span class="op-sym">−</span><span>Resta</span>
+          </button>
+          <button class="op-btn" id="op-multi" onclick="selectOp('multiplicacion',this)">
+            <span class="op-sym">×</span><span>Multiplicación</span>
+          </button>
+          <button class="op-btn" id="op-div" onclick="selectOp('division',this)">
+            <span class="op-sym">÷</span><span>División</span>
+          </button>
+        </div>
+        <div class="score-box">
+          <div class="score-label">Puntuación</div>
+          <div class="score-value" id="score-display">0 ⭐</div>
+          <div class="exercise-counter" id="exercise-counter">Ejercicio 1</div>
+        </div>
+      </div>
+
+      <!-- Panel del ejercicio -->
+      <div class="exercise-panel">
+
+        <!-- PASO 0: Presentación del problema -->
+        <div class="ex-step" id="step-problem">
+          <div class="ex-type-badge" id="ex-type-badge">SUMA</div>
+          <div class="equation-display">
+            <span class="eq-num" id="eq-a">3</span>
+            <span class="eq-op" id="eq-op">+</span>
+            <span class="eq-num" id="eq-b">4</span>
+            <span class="eq-eq">=</span>
+            <span class="eq-unknown">?</span>
+          </div>
+          <p class="problem-hint">Antes de responder, ve la explicación paso a paso</p>
+          <button class="btn-explain" onclick="startExplanation()">
+            💡 Ver Explicación Paso a Paso
+          </button>
+        </div>
+
+        <!-- PASO 1: Explicación -->
+        <div class="ex-step hidden" id="step-explanation">
+          <div class="exp-header">
+            <span class="exp-badge">📚 Explicación</span>
+            <span class="step-counter" id="step-counter">Paso 1 de 4</span>
+          </div>
+          <div class="exp-eq-mini">
+            <span id="mini-a">3</span>
+            <span id="mini-op">+</span>
+            <span id="mini-b">4</span>
+            <span>= ?</span>
+          </div>
+          <div class="step-content-area" id="step-content-area">
+            <!-- Inyectado por JS -->
+          </div>
+          <div class="exp-nav">
+            <button class="btn-step-nav" id="btn-prev" onclick="prevStep()" disabled>
+              ← Anterior
+            </button>
+            <div class="step-dots" id="step-dots"></div>
+            <button class="btn-step-nav" id="btn-next" onclick="nextStep()">
+              Siguiente →
+            </button>
+          </div>
+        </div>
+
+        <!-- PASO 2: Ejercicio con figuras -->
+        <div class="ex-step hidden" id="step-exercise">
+          <div class="exercise-header-mini">
+            <h4>🎯 Selecciona la figura con el resultado correcto</h4>
+            <div class="equation-mini">
+              <span id="sm-a">3</span>
+              <span id="sm-op">+</span>
+              <span id="sm-b">4</span>
+              <span>= ?</span>
+            </div>
+          </div>
+          <div class="figures-row" id="figures-row">
+            <!-- Inyectado por JS -->
+          </div>
+          <div class="feedback-area" id="feedback-area"></div>
+          <div class="next-wrap" id="next-wrap" style="display:none">
+            <button class="btn-next-ex" onclick="loadNextExercise()">
+              Siguiente Ejercicio →
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /exercise-panel -->
+    </div><!-- /demo-layout -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FIGURAS 3D ═══════════════════════════ -->
+<section class="section-light" id="figuras">
+  <div class="container">
+    <div class="section-header">
+      <h2>Figuras <span class="text-navy">3D</span> del Sistema</h2>
+      <p>El aprendizaje se complementa con piezas físicas impresas en 3D para
+        fortalecer la motricidad, la asociación visual y la comprensión matemática.</p>
+    </div>
+    <div class="shapes-showcase shapes-three">
+
+      <!-- Esfera Verde -->
+      <div class="shape-card">
+        <div class="shape-visual" style="background:#0d1b2a">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="54" r="42" fill="#a8d400"/>
+            <circle cx="36" cy="38" r="13" fill="#c5f000" opacity="0.6"/>
+            <circle cx="60" cy="66" r="8" fill="#7faf00" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="shape-info">
+          <h3><i class="bi bi-circle-fill" style="color:#a8d400"></i> Esfera</h3>
+          <p>Sin aristas ni vértices. Estimula la percepción táctil y la asociación con objetos del entorno cotidiano.</p>
+          <span class="shape-tag-pill" style="background:#a8d400; color:#0d1b2a">Verde</span>
+        </div>
+      </div>
+
+      <!-- Cubo Amarillo -->
+      <div class="shape-card">
+        <div class="shape-visual" style="background:#0d1b2a">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="25,45 75,45 75,90 25,90" fill="#f5c518"/>
+            <polygon points="5,25 55,25 75,45 25,45" fill="#ffe066"/>
+            <polygon points="75,45 95,25 95,70 75,90" fill="#c9a000"/>
+          </svg>
+        </div>
+        <div class="shape-info">
+          <h3><i class="bi bi-square-fill" style="color:#f5c518"></i> Cubo</h3>
+          <p>6 caras cuadradas iguales. Fortalece la percepción espacial y el conteo de caras, aristas y vértices.</p>
+          <span class="shape-tag-pill" style="background:#f5c518; color:#0d1b2a">Amarillo</span>
+        </div>
+      </div>
+
+      <!-- Triángulo Rojo -->
+      <div class="shape-card">
+        <div class="shape-visual" style="background:#0d1b2a">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,8 5,92 95,92" fill="#e84545"/>
+            <polygon points="50,8 95,92 72,92" fill="#c02020"/>
+            <line x1="5" y1="92" x2="95" y2="92" stroke="#ff6b6b" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="shape-info">
+          <h3><i class="bi bi-triangle-fill" style="color:#e84545"></i> Triángulo</h3>
+          <p>Tres lados y tres vértices. Introduce la geometría básica plana y desarrolla el reconocimiento de formas angulares.</p>
+          <span class="shape-tag-pill" style="background:#e84545; color:#fff">Rojo</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ MÓDULOS ═══════════════════════════════ -->
+<section class="section-dark" id="modulos">
+  <div class="container">
+    <div class="section-header light">
+      <h2>Módulos del <span class="text-lime">Sistema</span></h2>
+      <p>Una plataforma completa para gestionar el proceso educativo desde el registro hasta los reportes finales.</p>
+    </div>
+    <div class="modules-grid">
+
+      <div class="module-card">
+        <div class="mod-num text-lime">01</div>
+        <div class="mod-icon">
+          <i class="bi bi-person-plus-fill" style="color:#a8d400;font-size:2rem"></i>
+        </div>
+        <h3>Registro de Estudiantes</h3>
+        <p>Alta y gestión de perfiles individuales. Registra nombre, edad, nivel y necesidades educativas especiales de cada niño.</p>
+        <ul class="mod-list">
+          <li>Perfil personalizado</li>
+          <li>Nivel de adaptación</li>
+          <li>Historial de acceso</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="mod-num text-gold">02</div>
+        <div class="mod-icon">
+          <i class="bi bi-journal-bookmark-fill" style="color:#d4a017;font-size:2rem"></i>
+        </div>
+        <h3>Gestión de Lecciones</h3>
+        <p>Crea, edita y organiza lecciones por operación matemática y nivel de dificultad adaptado a cada estudiante.</p>
+        <ul class="mod-list">
+          <li>+, −, ×, ÷</li>
+          <li>Niveles de dificultad</li>
+          <li>Asignación por alumno</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="mod-num text-lime">03</div>
+        <div class="mod-icon">
+          <i class="bi bi-graph-up-arrow" style="color:#a8d400;font-size:2rem"></i>
+        </div>
+        <h3>Avances por Alumno</h3>
+        <p>Consulta el progreso individual: ejercicios completados, porcentaje de aciertos y operaciones dominadas.</p>
+        <ul class="mod-list">
+          <li>Tasa de acierto</li>
+          <li>Tiempo por ejercicio</li>
+          <li>Operaciones dominadas</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="mod-num text-gold">04</div>
+        <div class="mod-icon">
+          <i class="bi bi-file-earmark-bar-graph-fill" style="color:#d4a017;font-size:2rem"></i>
+        </div>
+        <h3>Reportes para Docentes</h3>
+        <p>Genera reportes completos del grupo o por estudiante para facilitar la evaluación y la planificación pedagógica.</p>
+        <ul class="mod-list">
+          <li>Reporte individual</li>
+          <li>Comparativa grupal</li>
+          <li>Exportar PDF</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DOCENTE ═══════════════════════════════ -->
+<section class="section-mid" id="docente">
+  <div class="container">
+    <div class="teacher-layout">
+
+      <div class="teacher-text">
+        <div class="section-tag-pill">Para el Docente</div>
+        <h2>Herramientas que <span class="text-lime">facilitan</span> tu trabajo</h2>
+        <p>MatemaKids NEE no solo beneficia al estudiante. El docente cuenta con
+          un panel completo para dar seguimiento personalizado a cada niño y
+          planificar las clases de manera más efectiva.</p>
+        <ul class="teacher-benefits">
+          <li>
+            <span class="benefit-star">✦</span>
+            <div>
+              <strong>Seguimiento individualizado</strong>
+              <p>Monitorea el avance de cada estudiante en tiempo real.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefit-star">✦</span>
+            <div>
+              <strong>Adaptación curricular</strong>
+              <p>Ajusta las lecciones según las necesidades de cada niño.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefit-star">✦</span>
+            <div>
+              <strong>Reportes automáticos</strong>
+              <p>Genera reportes detallados con un solo clic.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefit-star">✦</span>
+            <div>
+              <strong>Integración física-digital</strong>
+              <p>Coordina el uso de piezas 3D con las lecciones digitales.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mock del panel docente -->
+      <div class="dashboard-mock">
+        <div class="dash-header">
+          <span class="dash-title">Panel del Docente</span>
+          <span class="dash-live">● En vivo</span>
+        </div>
+        <div class="dash-stats-row">
+          <div class="dash-stat">
+            <div class="ds-num">12</div>
+            <div class="ds-label">Estudiantes</div>
+          </div>
+          <div class="dash-stat">
+            <div class="ds-num">87%</div>
+            <div class="ds-label">Promedio</div>
+          </div>
+          <div class="dash-stat">
+            <div class="ds-num">48</div>
+            <div class="ds-label">Lecciones</div>
+          </div>
+        </div>
+        <div class="dash-students-list">
+          <div class="dash-student">
+            <div class="stu-avatar" style="background:#a8d400; color:#0d1b2a">A</div>
+            <div class="stu-info">
+              <span class="stu-name">Ana García</span>
+              <div class="progress-wrap"><div class="progress-fill" style="width:82%"></div></div>
+            </div>
+            <span class="stu-pct">82%</span>
+          </div>
+          <div class="dash-student">
+            <div class="stu-avatar" style="background:#d4a017; color:#0d1b2a">C</div>
+            <div class="stu-info">
+              <span class="stu-name">Carlos López</span>
+              <div class="progress-wrap"><div class="progress-fill" style="width:91%"></div></div>
+            </div>
+            <span class="stu-pct">91%</span>
+          </div>
+          <div class="dash-student">
+            <div class="stu-avatar" style="background:#2d5b8a; color:#fff">M</div>
+            <div class="stu-info">
+              <span class="stu-name">María Rodríguez</span>
+              <div class="progress-wrap"><div class="progress-fill" style="width:75%"></div></div>
+            </div>
+            <span class="stu-pct">75%</span>
+          </div>
+          <div class="dash-student">
+            <div class="stu-avatar" style="background:#7faf00; color:#0d1b2a">L</div>
+            <div class="stu-info">
+              <span class="stu-name">Luis Martínez</span>
+              <div class="progress-wrap"><div class="progress-fill" style="width:68%"></div></div>
+            </div>
+            <span class="stu-pct">68%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CTA ═══════════════════════════════ -->
+<section class="cta-section">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>¿Listo para transformar el aprendizaje<br />con Aritmetica Digital C1?</h2>
+      <p>Aritmetica Digital C1 combina tecnología digital, diseño inclusivo y piezas
+        impresas en 3D para crear una experiencia educativa única y memorable.</p>
+    </div>
+    <div class="cta-btns">
+      <button class="btn-primary btn-lg">Solicitar Demo</button>
+      <button class="btn-outline btn-lg btn-light-outline">Más Información</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 40 40" class="footer-star">
+            <polygon points="20,2 24,14 38,14 27,22 31,34 20,26 9,34 13,22 2,14 16,14" fill="#d4a017"/>
+          </svg>
+          Aritmetica Digital C1
+        </div>
+        <p>Software educativo inclusivo para el aprendizaje de aritmética básica
+          en niños con necesidades educativas especiales.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>El Proyecto</h4>
+        <ul>
+          <li><a href="#caracteristicas">Características</a></li>
+          <li><a href="#demo">Demo Interactiva</a></li>
+          <li><a href="#figuras">Figuras 3D</a></li>
+          <li><a href="#modulos">Módulos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Para el Docente</h4>
+        <ul>
+          <li><a href="#modulos">Gestión de Lecciones</a></li>
+          <li><a href="#modulos">Registro de Alumnos</a></li>
+          <li><a href="#modulos">Reportes</a></li>
+          <li><a href="#docente">Panel Docente</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Operaciones</h4>
+        <ul>
+          <li><a href="#demo">Suma</a></li>
+          <li><a href="#demo">Resta</a></li>
+          <li><a href="#demo">Multiplicación</a></li>
+          <li><a href="#demo">División</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Aritmetica Digital C1 — Software Educativo Inclusivo. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
